@@ -1,15 +1,41 @@
 package com.example.domain;
 
+/**
+ * Teamドメインクラス
+ * 
+ * @author kano
+ *
+ */
 public class Team {
+	
+	// ID
 	private Integer id;
+	// 所属リーグ
 	private String leagueName;
+	// 球団名
 	private String teamName;
+	// 本拠地
 	private String headquarters;
+	// 発足日
 	private String inauguration;
+	// 歴史
 	private String history;
 	
+	/**
+	 * 引数なしコンストラクタ
+	 */
 	public Team() {}
 	
+	/**
+	 * 引数ありコンストラクタ（初期値セット用）
+	 * 
+	 * @param id ID
+	 * @param leagueName 所属リーグ
+	 * @param teamName 球団名
+	 * @param headquarters 本拠地
+	 * @param inauguration 発足日
+	 * @param history 歴史
+	 */
 	public Team(Integer id, String leagueName, String teamName, String headquarters, String inauguration,
 			String history) {
 		this.id = id;
