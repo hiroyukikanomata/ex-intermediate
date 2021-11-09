@@ -10,7 +10,8 @@ public class HotelSearchForm {
 	//@Range(min=0, max=300000, message="数値範囲（0-300000）バリデーションエラー")
 	//@Pattern(regexp="^[0-9]*$", message="数字入力バリデーションエラー")
 	// 以下のように正規表現を使えば、上記の問題を解決でき、かつ柔軟なバリデーションが可能
-	@Pattern(regexp="^$|[0-9]|[1-9][0-9]{1,4}|[1-2][0-9]{5}|300000", message="数字入力＆数値範囲（0-300000）バリデーションエラー")
+	// 最初の「^$」は空文字をOKとする正規表現、その後に続くのは、0～300000をOKとする正規表現
+	@Pattern(regexp="^$|[0-9]|[1-9][0-9]{1,4}|[1-2][0-9]{5}|300000", message="空文字入力＆数値範囲（0-300000）バリデーションエラー")
 	private String lessThanPrice;
 	
 	public String getLessThanPrice() {
